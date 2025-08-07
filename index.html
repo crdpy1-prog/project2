@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>산본고등학교 급식 정보</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍽️ 산본고등학교 급식 정보</h1>
+        </header>
+        
+        <div class="date-selector">
+            <label for="meal-date">날짜 선택:</label>
+            <input type="date" id="meal-date" name="meal-date">
+            <button id="search-btn">급식 정보 조회</button>
+        </div>
+        
+        <div class="loading" id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>급식 정보를 가져오는 중...</p>
+        </div>
+        
+        <div class="meal-info" id="meal-info" style="display: none;">
+            <h2 id="meal-date-display"></h2>
+            <div class="meal-cards">
+                <div class="meal-card" id="breakfast-card" style="display: none;">
+                    <h3>🌅 아침</h3>
+                    <ul id="breakfast-menu"></ul>
+                </div>
+                <div class="meal-card" id="lunch-card" style="display: none;">
+                    <h3>🌞 점심</h3>
+                    <ul id="lunch-menu"></ul>
+                </div>
+                <div class="meal-card" id="dinner-card" style="display: none;">
+                    <h3>🌙 저녁</h3>
+                    <ul id="dinner-menu"></ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="error-message" id="error-message" style="display: none;">
+            <p>⚠️ 급식 정보를 가져올 수 없습니다. 다시 시도해주세요.</p>
+        </div>
+        
+        <div class="no-meal" id="no-meal" style="display: none;">
+            <p>📅 해당 날짜에는 급식이 제공되지 않습니다.</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
